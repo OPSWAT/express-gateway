@@ -8,10 +8,7 @@
           "type": "string"
         },
         "paths": {
-          "type": [
-            "string",
-            "array"
-          ],
+          "type": ["string", "array"],
           "items": {
             "type": "string"
           }
@@ -28,10 +25,7 @@
           }
         },
         "methods": {
-          "type": [
-            "string",
-            "array"
-          ],
+          "type": ["string", "array"],
           "items": {
             "type": "string"
           }
@@ -39,10 +33,7 @@
       }
     },
     "conditionAction": {
-      "type": [
-        "object",
-        "null"
-      ],
+      "type": ["object", "null"],
       "properties": {
         "action": {
           "type": "object",
@@ -55,9 +46,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "name"
-          ],
+          "required": ["name"],
           "default": {
             "name": "always"
           }
@@ -72,6 +61,9 @@
       "properties": {
         "port": {
           "type": "number"
+        },
+        "keepAliveTimeout": {
+          "type": "number"
         }
       }
     },
@@ -79,6 +71,9 @@
       "type": "object",
       "properties": {
         "port": {
+          "type": "number"
+        },
+        "keepAliveTimeout": {
           "type": "number"
         },
         "tls": {
@@ -119,17 +114,12 @@
               "type": "string"
             }
           },
-          "required": [
-            "port"
-          ]
+          "required": ["port"]
         }
       ]
     },
     "apiEndpoints": {
-      "type": [
-        "object",
-        "null"
-      ],
+      "type": ["object", "null"],
       "additionalProperties": {
         "anyOf": [
           {
@@ -145,10 +135,7 @@
       }
     },
     "serviceEndpoints": {
-      "type": [
-        "object",
-        "null"
-      ],
+      "type": ["object", "null"],
       "additionalProperties": {
         "type": "object",
         "properties": {
@@ -166,14 +153,10 @@
         },
         "oneOf": [
           {
-            "required": [
-              "url"
-            ]
+            "required": ["url"]
           },
           {
-            "required": [
-              "urls"
-            ]
+            "required": ["urls"]
           }
         ]
       }
@@ -185,11 +168,7 @@
       }
     },
     "pipelines": {
-      "type": [
-        "object",
-        "array",
-        "null"
-      ],
+      "type": ["object", "array", "null"],
       "additionalProperties": {
         "type": "object",
         "properties": {
@@ -225,9 +204,7 @@
             ]
           }
         },
-        "required": [
-          "policies"
-        ]
+        "required": ["policies"]
       }
     }
   }
